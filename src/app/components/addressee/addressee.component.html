@@ -1,0 +1,17 @@
+<!-- Button trigger modal -->
+<div class="container" >
+    <ul class="list-group">
+        <li class="list-group-item" style="margin: 5px" *ngFor="let addressee of addresses">
+            <p>Nombre: {{addressee.name}}</p> 
+            <p>Rut: {{addressee.rut}}</p>
+            <p>Email: {{addressee.email}}</p>
+            <p>Numero de Cuenta: {{addressee.account}}</p>
+            <p>Banco :  {{addressee.bank}}</p>
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="openDialogTransfer(addressee)">Transferir</button>
+
+        </li>
+    </ul>
+
+    
+<button type="button" class="btn btn-primary btn-block" data-toggle="modal" (click)="openDialog()">Agregar Destinatario</button>
+</div>

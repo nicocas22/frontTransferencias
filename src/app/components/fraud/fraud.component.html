@@ -1,0 +1,14 @@
+<div class="container" >
+    <ul class="list-group">
+        <li class="list-group-item" style="margin: 5px" *ngFor="let user of usersfraud">
+            <h3>Cuenta Con transacciones Fraudulentas</h3>
+            <p>Nombre: {{user.name}}</p> 
+            <p>Rut: {{user.rut}}</p>
+            <p>Email: {{user.email}}</p>
+            <p>Numero de Cuenta: {{user.account}}</p>
+            <p>Banco :  {{user.bank}}</p>
+            
+        </li>
+    </ul>
+
+</div>

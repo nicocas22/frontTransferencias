@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-headear" style="margin: 1%;">
+                SignUp
+            </div>
+            <div class="card-body">
+                <form (submit)='signUp()'>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="user.name" name="name" class="form-control" placeholder="name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="user.lastName" name="lastName" class="form-control"
+                            placeholder="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" maxlength="9" [(ngModel)]="user.rut" name="rut" class="form-control" placeholder="rut"
+                            required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="user.email" name="email" class="form-control"
+                            placeholder="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" [(ngModel)]="user.password" name="password" class="form-control"
+                            placeholder="password" required>
+                    </div>
+                    <!-- <div class="form-group">
+                        <input type="text" [(ngModel)]="user.bank" name="bank" class="form-control" placeholder="bank"
+                            required>
+                    </div> -->
+                    <div class="form-group">
+                        <select [(ngModel)]="user.bank"  [ngModelOptions]="{standalone: true}" class="form-control">
+                            <option disabled selected>Seleccione Banco</option>
+                            <option *ngFor="let bank of banks">
+                                {{bank.name}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" maxlength="16" [(ngModel)]="user.account" name="account" class="form-control"
+                            placeholder="account" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        SignUp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

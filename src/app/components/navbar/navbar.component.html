@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="/home">Transferencias Banco Estado</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" routerLink="/transfer" routerLinActive="active">Transfers</a>
+                    <a class="nav-link" routerLink="/fraud" routerLinActive="active">Fraud</a>
+                    <a class="nav-link" routerLink="/addressee" routerLinActive="active">Addressees</a>
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <ng-container *ngIf="!UserService.loggedIn(); else LoggedIn">
+                        <a class="nav-link" routerLink="/signin" routerLinActive="active">SignIn</a>
+                        <a class="nav-link" routerLink="/signup" routerLinActive="active">SignUp</a>
+                    </ng-container>
+                    <ng-template #LoggedIn>
+                        <a class="nav-link" (click)="UserService.logout()">Loggout</a>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
