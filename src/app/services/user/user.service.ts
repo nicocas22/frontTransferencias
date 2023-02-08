@@ -6,13 +6,12 @@ import { Router } from '@angular/router';
 })
 export class UserService {
 
-  private URL = 'http://localhost:3000/api'
+  private URL = 'https://servertransferencias-production.up.railway.app/api'
 
   constructor(private http: HttpClient, private router: Router) { }
 
   signUp(user: any) {
-    console.log(user);
-    
+
     return this.http.post<any>(this.URL + '/user', user);
   }
 

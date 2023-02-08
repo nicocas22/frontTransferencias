@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AddresseerService {
-  private URL = 'http://localhost:3000/api'
+  private URL = 'https://servertransferencias-production.up.railway.app/api'
   constructor(private http: HttpClient) { }
 
   createAddressee( addressee: any) {

@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class TransferService {
-  private URL = 'http://localhost:3000/api'
+  private URL = 'https://servertransferencias-production.up.railway.app/api'
   constructor(private http: HttpClient, private router: Router) { }
 
   createTransfer(data: any) {
