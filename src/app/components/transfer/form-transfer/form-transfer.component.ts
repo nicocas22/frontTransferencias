@@ -24,10 +24,8 @@ export class FormTransferComponent implements OnInit {
   createTransfer() {
     this.payload.idSender = this.addressee.idSender
     this.payload.rutAddressee = this.addressee.rut
-    console.log(this.payload);
-    
     this.transferServices.createTransfer(this.payload).subscribe(res => {
-      console.log(res);
+      this.dialogRef.closeAll();
     }, err => console.log(err))
   }
 
